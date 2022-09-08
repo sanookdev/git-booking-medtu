@@ -56,9 +56,18 @@
                                 id='for' placeholder="ใช้สำหรับ" name="for" required></select>
                         </div>
                         <div class="mb-3">
+                            <label for="for">เบอร์ติดต่อ</label>
+                            <input type="text" class="form-control form-control-sm" name='mobile' id='mobile'
+                                placeholder="ใช้สำหรับ" name="for" required />
+                        </div>
+
+                        <!-- this is future :) -->
+                        <div class="mb-3" hidden>
                             <label for="acs">อุปกรณ์ที่ต้องการ</label>
                             <div class="checkbox_result form-row"></div>
                         </div>
+                        <!-- this is future :) -->
+
                         <div class="mb-3">
                             <label for="details_booking">รายละเอียดเพิ่มเติม</label>
                             <textarea class="form-control form-control-sm" id="details_booking" rows='4'
