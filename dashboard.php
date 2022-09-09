@@ -50,7 +50,12 @@
                 <div class="card card-border">
                     <div class="card-body">
                         SESSION :
-                        <? print_r($_SESSION);?>
+                        <? 
+                        foreach($_SESSION as $index => $val) {
+                            echo "$index = $val , ";
+                        }
+                        
+                        ?>
                     </div>
                 </div>
             </div>
