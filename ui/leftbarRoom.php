@@ -5,9 +5,17 @@
         </div>
         <div class="list-group-item">
             <button onclick="window.location.href='room-booking.php'" class="btn btn-light btn-block border"
-                style="text-align:left!important;">ตารางการจอง</button>
+                style="text-align:left!important;">ปฏิทินการจองห้อง</button>
             <button onclick="window.location.href='booking-list.php'" class="btn btn-light btn-block border"
                 style="text-align:left!important;">รายการจอง</button>
+        </div>
+    </div>
+
+    <div class="list-group small shadow">
+        <div class="list-group-item active headGroup">
+            <h4>ตั้งค่า <i class="fa fa-gear"></i> </h4>
+        </div>
+        <div class="list-group-item">
             <!-- <button onclick="window.location.href='booking.php'" class="btn btn-light btn-block border" style="text-align:left!important;">จองห้องประชุม</button> -->
             <button onclick="window.location.href='building-list.php'" class="btn btn-light btn-block border"
                 style="text-align:left!important;">ตึก</button>
