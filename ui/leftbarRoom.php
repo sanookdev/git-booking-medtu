@@ -15,8 +15,8 @@
                 style="text-align:left!important;">ชั้น</button>
             <button onclick="window.location.href='rooms-list.php'" class="btn btn-light btn-block border"
                 style="text-align:left!important;">ห้องประชุม</button>
-            <button onclick="window.location.href='accessory-list.php'" class="btn btn-light btn-block border"
-                style="text-align:left!important;">อุปกรณ์</button>
+            <!-- <button onclick="window.location.href='accessory-list.php'" class="btn btn-light btn-block border"
+                style="text-align:left!important;">อุปกรณ์</button> -->
             <button onclick="window.location.href='use-list.php'" class="btn btn-light btn-block border"
                 style="text-align:left!important;">ใช้สำหรับ</button>
         </div>

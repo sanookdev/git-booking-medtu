@@ -58,14 +58,14 @@
                         <div class="mb-3">
                             <label for="for">เบอร์ติดต่อ</label>
                             <input type="text" class="form-control form-control-sm" name='mobile' id='mobile'
-                                placeholder="ใช้สำหรับ" name="for" required />
+                                placeholder="เบอร์มือถือ" required />
                         </div>
 
                         <!-- this is future :) -->
-                        <div class="mb-3" hidden>
+                        <!-- <div class="mb-3" hidden>
                             <label for="acs">อุปกรณ์ที่ต้องการ</label>
                             <div class="checkbox_result form-row"></div>
-                        </div>
+                        </div> -->
                         <!-- this is future :) -->
 
                         <div class="mb-3">

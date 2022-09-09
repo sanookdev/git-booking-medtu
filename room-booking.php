@@ -29,22 +29,23 @@
             include "ui/leftbarRoom.php";
             ?>
             <div class="col-lg-9 col-md-9 mb-2">
-                <div class="form-row" style="background-color:#F0E68C;padding:10px;margin:2px;border: 1px solid black;">
+                <div class="form-row shadow"
+                    style="background-color:#F0E68C;padding:10px;margin:2px; border-radius:0.25rem;">
                     <div class="col-2">
                         <label for="class_no" style="color:#2F4F4F">ตึก : </label>
-                        <select class='form-control form-control-sm' style='border: 1px solid darkgrey;'
+                        <select class='form-control form-control-sm' style='border: 0.25px solid darkgrey;'
                             name="building_name" id="building_name">
                         </select>
                     </div>
                     <div class="col-2">
                         <label for="class_no" style="color:#2F4F4F">ชั้น : </label>
-                        <select class='form-control form-control-sm' style='border: 1px solid darkgrey;' name="class_no"
-                            id="class_no" disabled>
+                        <select class='form-control form-control-sm' style='border: 0.25px solid darkgrey;'
+                            name="class_no" id="class_no" disabled>
                         </select>
                     </div>
                     <div class="col-2">
                         <label for="name_room" style='color:#2F4F4F'>ห้องประชุม : </label>
-                        <select class='form-control form-control-sm' style='border: 1px solid darkgrey;'
+                        <select class='form-control form-control-sm' style='border: 0.25px solid darkgrey;'
                             name='name_room' id='name_room' disabled></select>
                     </div>
                     <div class="col-2 align-self-end d-flex">
@@ -60,7 +61,7 @@
 
                 </div>
                 <hr>
-                <table id="calendarTable">
+                <table id="calendarTable" class="table table-bordered ">
                 </table>
                 <div id='eventPopUp' hidden>
                     <button id="closeEventBtn">&#10006</button>

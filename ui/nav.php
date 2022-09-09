@@ -37,7 +37,7 @@
                  </div>
              </form> -->
 
-             <a href="#" class="ml-3 btn btn-sm btn-warning">ออกจากระบบ</a>
+             <a href="#" class="ml-3 btn btn-sm btn-danger"><i class="fa fa-sign-out"></i> Sign Out</a>
 
          </div>
      </div>

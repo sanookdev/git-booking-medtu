@@ -186,6 +186,7 @@
                         topic: 'booking-list'
                     },
                     success: function(data) {
+                        console.log(data)
                         $('#showData').html(data);
                         $('#room_details').modal('show');
                     }
@@ -339,15 +340,15 @@
         $('#insertBooking').on("submit", function(event) {
             event.preventDefault();
             data = {};
-            checkbox = '';
             i = 0;
-            $("input:checkbox[name=acs]:checked").each(function() {
-                if (i != 0) {
-                    checkbox += ',';
-                }
-                checkbox += $(this).val();
-                i++;
-            });
+            checkbox = '';
+            // $("input:checkbox[name=acs]:checked").each(function() {
+            //     if (i != 0) {
+            //         checkbox += ',';
+            //     }
+            //     checkbox += $(this).val();
+            //     i++;
+            // });
 
             data['id_room'] = $('select[name=name_room]').val();
             data['id_card'] = '1103000076902';
@@ -355,9 +356,10 @@
             data['details'] = $('#details_booking').val();
             data['start_date'] = $('input[name=start_date]').val().replace('T', " ");
             data['end_date'] = $('input[name=end_date]').val().replace('T', " ");
-            data['acs'] = checkbox;
+            // data['acs'] = checkbox;
             data['for'] = $('select[name=for]').val();
-            console.log(data['acs']);
+            data['mobile'] = $('input[name=mobile]').val();
+            // console.log(data);
             $.ajax({
                 url: "insert.php",
                 method: "POST",

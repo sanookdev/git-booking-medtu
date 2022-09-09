@@ -126,7 +126,7 @@
         // ******************************* INSERT DATA *********************************
         $('#insertAcs').on("submit", function(event) {
             event.preventDefault();
-            var id = <?= $last_id; ?>;
+            var id = <?= json_encode($last_id); ?>;
             data = [];
             data[0] = "accessories";
             data[1] = $('input[name=name_acs]').val();

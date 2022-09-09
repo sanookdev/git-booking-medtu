@@ -41,39 +41,40 @@
                                 JOIN building AS b ON room.building_id =  b.id
                                     JOIN category AS cat ON res.for = cat.category_id
                                         WHERE cat.type = 'use' AND res.id = '" . $_POST['id'] . "'";
+        // echo $sql;
         $result = $conn->query($sql);
         $output .= '<table class="table table-bordered">';
-        $acs = '';
-        $acs_text = '';
+        // $acs = '';
+        // $acs_text = '';
         while ($row = $result->fetch_assoc()) {
-            $acs = $row['acs'];
-            $acs_arr = explode(',',$acs);
-            $sql_acs = 'SELECT * FROM category WHERE ';
-            for($i = 0 ; $i < count($acs_arr) ; $i++){
-                if($i == 0) {$sql_acs .= '(';}
-                else if ($i != 0 && $i != count($acs_arr)){
-                    $sql_acs .= ' OR ';
-                }
+            // $acs = $row['acs'];
+            // $acs_arr = explode(',',$acs);
+            // $sql_acs = 'SELECT * FROM category WHERE ';
+            // for($i = 0 ; $i < count($acs_arr) ; $i++){
+            //     if($i == 0) {$sql_acs .= '(';}
+            //     else if ($i != 0 && $i != count($acs_arr)){
+            //         $sql_acs .= ' OR ';
+            //     }
 
-                $sql_acs .= "category_id = '". $acs_arr[$i]."'";
+            //     $sql_acs .= "category_id = '". $acs_arr[$i]."'";
 
-                if($i == count($acs_arr)-1){
-                     $sql_acs .= ") AND type = 'accessories'";
-                }
+            //     if($i == count($acs_arr)-1){
+            //          $sql_acs .= ") AND type = 'accessories'";
+            //     }
 
-            }
+            // }
 
-            $result = $conn->query($sql_acs);
-            if($result->num_rows > 0){
-                $j = 0;
-                while ($row2 = $result->fetch_assoc()){
-                    if($j != 0){
-                        $acs_text .= "<br>";
-                    }
-                    $acs_text .= $j+1 . ".".$row2['topic'];
-                    $j++;
-                }
-            }
+            // $result = $conn->query($sql_acs);
+            // if($result->num_rows > 0){
+            //     $j = 0;
+            //     while ($row2 = $result->fetch_assoc()){
+            //         if($j != 0){
+            //             $acs_text .= "<br>";
+            //         }
+            //         $acs_text .= $j+1 . ".".$row2['topic'];
+            //         $j++;
+            //     }
+            // }
 
             $output .= '
                 <tr>
@@ -109,12 +110,12 @@
                     <td>' . date('G:h', strtotime($row['begin'])) . ' น. - ' . date('G:h', strtotime($row['end'])) . ' น.' . '</td>
                 </tr>
                 <tr>
-                    <th>อุปกรณ์ที่ต้องการ</th>
-                    <td>' . $row['use_for'] . '</td>
+                    <th>เบอร์โทร</th>
+                    <td>' . $row['mobile'] . '</td>
                 </tr> 
                 <tr>
-                    <th>อุปกรณ์ที่ต้องการ</th>
-                    <td>' . $acs_text . '</td>
+                    <th>ใช้สำหรับ</th>
+                    <td>' . $row['use_for'] . '</td>
                 </tr> 
                  <tr>
                     <th>รายละเอียดเพิ่มเติม</th>
